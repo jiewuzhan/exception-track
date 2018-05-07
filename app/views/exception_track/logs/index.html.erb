@@ -35,10 +35,11 @@
           <td><%= log.id %></td>
           <td><%= link_to log.title, log %></td>
           <td class="date"><%= log.created_at.to_s %></td>
+          <td class="delete"><%= button_to 'Delete', log, :method => :delete, class: 'btn-danger' %></td>
         </tr>
       <% end %>
     </tbody>
-  </table>
+  </table
 
   <%= paginate @logs %>
 <% end %>

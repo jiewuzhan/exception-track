@@ -1,5 +1,10 @@
 <div class="toolbar">
-  <%= link_to 'Back', logs_path, class: 'btn' %>
+  <div class="inline">
+    <%= link_to 'Back', logs_path, class: 'btn' %>
+   </div>
+   <div class="inline">
+    <%= button_to 'Delete', @log, :method => :delete, class: 'btn' %>
+   </div>
 </div>
 
 <h1><%= @log.title %></h1>

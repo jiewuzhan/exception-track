@@ -18,6 +18,12 @@ module ExceptionTrack
       redirect_to logs_url, notice: 'Logs was successfully destroyed.'
     end
 
+    # DELETE /exception_logs/1
+    def destroy
+      @log.delete
+      redirect_to logs_url, notice: 'Log was successfully destroyed.' 
+    end
+
     private
       # Use callbacks to share common setup or constraints between actions.
       def set_log
